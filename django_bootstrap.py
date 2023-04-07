@@ -51,12 +51,6 @@ def createUser(args):
     u.is_active = True
     u.save()
 
-    names = u.username.split('@')[0].split('.') # first and last in array
-    fn = names[0][:1].upper() + names[0][1:] or names[0] # extract first name with upper 1st char
-    ln = names[1][:1].upper() + names[1][1:] or names[0] # extract last name with lower 1st char
-    fullname = fn + ' ' + ln
-    print ('django_bootstrap: generated display name from email: ' + fullname)
-
     up = UserProfile.objects.create(user=u)
     up.assign_role(0)
     up.is_admin = True
