@@ -60,7 +60,6 @@ def createUser(args):
         u'welcome_tour_menu']
     up.title='Alation Insider'
     up.description='I was created through a bootstrap. You might say I am a robot like ALLIE.'
-    up.display_name=fullname
     up.save()
 
     # disable auto signups
